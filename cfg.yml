@@ -1,134 +1,135 @@
-amazon_markerplaces:
-  www.amazon.fr:
-    3060:
-      max_price: 500
-      items:
-        - asin: B08WB6R2K4
-        - asin: B08CRH6DYB
-        - asin: B08WBB7KXV
-        - asin: B08WRP83LN
-        - asin: B08WS5X6F5
-        - asin: B08WH4RK2C
-        - asin: B08WRBF83Y
-        - asin: B08WR6DRQQ
-        - asin: B08Y92K1DZ
-        - asin: B08WS23Z3S
-        - asin: B08WBB3ZMJ
-    3070:
-      max_price: 700
-      items:
-        - asin: B08KHL21CV
-        - asin: B08LNY8P5L
-        - asin: B08KHL2J5X
-        - asin: B08L6PCZTR
-        - asin: B08LNPPCWJ
-        - asin: B08LLG9KQT
-        - asin: B08HT7PR9Y
-    2080:
-      max_price: 500
-      items:
-        - asin: B0843QDH7D
-        - asin: B07GQYQ2YW
-  www.amazon.es:
-    3060:
-      max_price: 500
-      items:
-        - asin: B08WB6R2K4
-        - asin: B08WBB3ZMJ
-        - asin: B08WRBF83Y
-        - asin: B08WR6DRQQ
-        - asin: B08WS23Z3S
-        - asin: B08WS23Z3S
-        - asin: B08WS5X6F5
-        - asin: B08WBB7KXV
-        - asin: B08Y92K1DZ
-    3070:
-      max_price: 700
-      items:
-        - asin: B08LLG9KQT
-        - asin: B08R427DMQ
-        - asin: B08MYCN952
-        - asin: B08LNWPYRS
-        - asin: B08KHL21CV
-        - asin: B08L8L71SM
-    2080:
-      max_price: 500
-      items:
-        - asin: B07GSX1DBN
-        - asin: B07GQYQ2YW
-        - asin: B08KZDWN89
-        - asin: B08KZF8J64
-        - asin: B07J9JC96Q
-        - asin: B07HHWS99D
-        - asin: B07HGX95YP
-        - asin: B07GJ7TV8L
-        - asin: B07V1PCX3P
-        - asin: B07TXWLG34
-  www.amazon.de:
-    3060:
-      max_price: 500
-      items:
-        - asin: B08WRK84PS
-        - asin: B08XQWR62V
-        - asin: B08WHML7GL
-        - asin: B08WH4RK2C
-        - asin: B08WHJFYM8
-        - asin: B08WRP83LN
-        - asin: B082WJR22T
-        - asin: B08NW76K61
-        - asin: B08WS23Z3S
-    2080:
-      max_price: 500
-      items:
-        - asin: B07P9PMBCV
-        - asin: B07JRB6GH9
-        - asin: B07GPW17YM
-        - asin: B07GQYQ2YW
-        - asin: B0843QDH7D
-        - asin: B08HL1V728
-        - asin: B08FDZW3YD
-    3070:
-      max_price: 700
-      items:
-        - asin: B08P37HYZM
-  www.amazon.it:
-    3070:
-      max_price: 700
-      items:
-        - asin: B07JCF4V95
-        - asin: B08RMRJN6R
-        - asin: B08R427DMQ
-        - asin: B08KHL21CV
-        - asin: B08R5977PC
-        - asin: B08RMP2FPY
-        - asin: B08SC451X3
-        - asin: B08RS5753K
-        - asin: B08LNQTSCT
-        - asin: B08HBF5L3K
-        - asin: B08SC8BLQL
-        - asin: B08P37HYZM
-        - asin: B08HT7PR9Y
-        - asin: B08LLG9KQT
-        - asin: B08L6PCZTR
-        - asin: B08RN2BBTV
-        - asin: B08V4HCGG2
-        - asin: B08LNY8P5L
-        - asin: B08V4Z271G
-        - asin: B08Y6WZ9QM
-    3060:
-      max_price: 500
-      items:
-        - asin: B08WB6R2K4
-        - asin: B08WBB3ZMJ
-        - asin: B08WBB7KXV
-        - asin: B08Y92K1DZ
-        - asin: B08NW2X37Z
-        - asin: B08WRBF83Y
-        - asin: B08WS5X6F5
-        - asin: B08WS23Z3S
-    2070:
-      max_price: 450
-      items:
-        - asin: B07TSQHWQJ
-amazon_seller_blacklist:
-  Dein-Reduzierter-Preis:
+amazon:
+  markerplaces:
+    www.amazon.fr:
+      3060:
+        max_price: 500
+        items:
+          - asin: B08WB6R2K4
+          - asin: B08CRH6DYB
+          - asin: B08WBB7KXV
+          - asin: B08WRP83LN
+          - asin: B08WS5X6F5
+          - asin: B08WH4RK2C
+          - asin: B08WRBF83Y
+          - asin: B08WR6DRQQ
+          - asin: B08Y92K1DZ
+          - asin: B08WS23Z3S
+          - asin: B08WBB3ZMJ
+      3070:
+        max_price: 700
+        items:
+          - asin: B08KHL21CV
+          - asin: B08LNY8P5L
+          - asin: B08KHL2J5X
+          - asin: B08L6PCZTR
+          - asin: B08LNPPCWJ
+          - asin: B08LLG9KQT
+          - asin: B08HT7PR9Y
+      2080:
+        max_price: 500
+        items:
+          - asin: B0843QDH7D
+          - asin: B07GQYQ2YW
+    www.amazon.es:
+      3060:
+        max_price: 500
+        items:
+          - asin: B08WB6R2K4
+          - asin: B08WBB3ZMJ
+          - asin: B08WRBF83Y
+          - asin: B08WR6DRQQ
+          - asin: B08WS23Z3S
+          - asin: B08WS23Z3S
+          - asin: B08WS5X6F5
+          - asin: B08WBB7KXV
+          - asin: B08Y92K1DZ
+      3070:
+        max_price: 700
+        items:
+          - asin: B08LLG9KQT
+          - asin: B08R427DMQ
+          - asin: B08MYCN952
+          - asin: B08LNWPYRS
+          - asin: B08KHL21CV
+          - asin: B08L8L71SM
+      2080:
+        max_price: 500
+        items:
+          - asin: B07GSX1DBN
+          - asin: B07GQYQ2YW
+          - asin: B08KZDWN89
+          - asin: B08KZF8J64
+          - asin: B07J9JC96Q
+          - asin: B07HHWS99D
+          - asin: B07HGX95YP
+          - asin: B07GJ7TV8L
+          - asin: B07V1PCX3P
+          - asin: B07TXWLG34
+    www.amazon.de:
+      3060:
+        max_price: 500
+        items:
+          - asin: B08WRK84PS
+          - asin: B08XQWR62V
+          - asin: B08WHML7GL
+          - asin: B08WH4RK2C
+          - asin: B08WHJFYM8
+          - asin: B08WRP83LN
+          - asin: B082WJR22T
+          - asin: B08NW76K61
+          - asin: B08WS23Z3S
+      2080:
+        max_price: 500
+        items:
+          - asin: B07P9PMBCV
+          - asin: B07JRB6GH9
+          - asin: B07GPW17YM
+          - asin: B07GQYQ2YW
+          - asin: B0843QDH7D
+          - asin: B08HL1V728
+          - asin: B08FDZW3YD
+      3070:
+        max_price: 700
+        items:
+          - asin: B08P37HYZM
+    www.amazon.it:
+      3070:
+        max_price: 700
+        items:
+          - asin: B07JCF4V95
+          - asin: B08RMRJN6R
+          - asin: B08R427DMQ
+          - asin: B08KHL21CV
+          - asin: B08R5977PC
+          - asin: B08RMP2FPY
+          - asin: B08SC451X3
+          - asin: B08RS5753K
+          - asin: B08LNQTSCT
+          - asin: B08HBF5L3K
+          - asin: B08SC8BLQL
+          - asin: B08P37HYZM
+          - asin: B08HT7PR9Y
+          - asin: B08LLG9KQT
+          - asin: B08L6PCZTR
+          - asin: B08RN2BBTV
+          - asin: B08V4HCGG2
+          - asin: B08LNY8P5L
+          - asin: B08V4Z271G
+          - asin: B08Y6WZ9QM
+      3060:
+        max_price: 500
+        items:
+          - asin: B08WB6R2K4
+          - asin: B08WBB3ZMJ
+          - asin: B08WBB7KXV
+          - asin: B08Y92K1DZ
+          - asin: B08NW2X37Z
+          - asin: B08WRBF83Y
+          - asin: B08WS5X6F5
+          - asin: B08WS23Z3S
+      2070:
+        max_price: 450
+        items:
+          - asin: B07TSQHWQJ
+  seller_blacklist:
+    Dein-Reduzierter-Preis:

@@ -2,8 +2,8 @@ package amzn
 
 type (
 	Config struct {
-		AmazonMarkerplaces    map[string]Categories `json:"amazon_markerplaces,omitempty" yaml:"amazon_markerplaces"`
-		AmazonSellerBlacklist map[string]*string    `json:"amazon_seller_blacklist,omitempty" yaml:"amazon_seller_blacklist"`
+		Markerplaces    map[string]Categories `json:"markerplaces,omitempty" yaml:"markerplaces"`
+		SellerBlacklist map[string]*string    `json:"seller_blacklist,omitempty" yaml:"seller_blacklist"`
 	}
 	Categories map[string]Group
 	Group      struct {
