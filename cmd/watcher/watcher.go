@@ -19,7 +19,7 @@ func main() {
 
 	for marketPlaceURL, groups := range cfg.Amazon.Markerplaces {
 		log.Printf("starting to watch %s", marketPlaceURL)
-		g.Go(amzn.FetchResults(ctx, marketPlaceURL, groups, cfg.Amazon.SellerBlacklist, nil))
+		g.Go(amzn.FetchResults(ctx, marketPlaceURL, groups, cfg.Amazon.SellerBlacklist, amzn.OnOffer))
 	}
 
 	if err := g.Wait(); err != nil {

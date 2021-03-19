@@ -15,7 +15,7 @@ func FetchResults(
 	domain string,
 	cats Categories,
 	blacklist map[string]*string,
-	onOfferMatching func(string, string, Offer),
+	onOfferMatching func(string, string, string, Offer),
 ) func() error {
 	return func() error {
 		client := &http.Client{}
@@ -46,7 +46,7 @@ func FetchResults(
 						for _, offer := range offers {
 							if offer.Price < *item.MaxPrice {
 								if _, ok := blacklist[offer.ShippingFrom]; !ok {
-									onOfferMatching(domain, groupName, offer)
+									onOfferMatching(domain, groupName, item.ASIN, offer)
 								}
 							}
 						}

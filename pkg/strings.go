@@ -8,5 +8,5 @@ var (
 )
 
 func SingleLineString(s string) string {
-	return sls.Replace(s)
+	return strings.TrimSpace(sls.Replace(s))
 }
