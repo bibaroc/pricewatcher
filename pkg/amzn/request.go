@@ -17,7 +17,11 @@ func makeRequest(domain, asin string) (*http.Request, error) {
 	}
 
 	request.Header.Set("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0s")
+	request.Header.Set("Accept", "text/html,*/*")
 	request.Header.Set("Accept-Language", "en-US,en;q=0.9")
+	request.Header.Set("X-Requested-With", "XMLHttpRequest")
+	request.Header.Set("DNT", "1")
+	request.Header.Set("Connection", "keep-alive")
 
 	return request, nil
 }

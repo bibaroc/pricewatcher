@@ -19,3 +19,15 @@ func Get200ResBody(c *http.Client, r *http.Request) ([]byte, error) {
 
 	return io.ReadAll(res.Body)
 }
+
+func GetResBody(c *http.Client, r *http.Request) ([]byte, int, error) {
+	res, err := c.Do(r)
+	if err != nil {
+		return nil, -1, err
+	}
+	defer res.Body.Close()
+
+	data, err := io.ReadAll(res.Body)
+
+	return data, res.StatusCode, err
+}
