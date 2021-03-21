@@ -10,7 +10,7 @@ import (
 )
 
 type Config struct {
-	Amazon amzn.Config `json:"amazon,omitempty", yaml:"amazon"`
+	Amazon amzn.Config `json:"amazon,omitempty" yaml:"amazon"`
 }
 
 func (c Config) String() string {

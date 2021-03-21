@@ -9,6 +9,8 @@ import (
 	"strings"
 
 	"github.com/bibaroc/pricewatcher/pkg/amzn"
+	"github.com/bibaroc/pricewatcher/pkg/mngo"
+	"github.com/bibaroc/pricewatcher/pkg/msg"
 	"github.com/bibaroc/pricewatcher/pkg/tlgrm"
 	"golang.org/x/sync/errgroup"
 )
@@ -19,6 +21,7 @@ func main() {
 		log.Println(err)
 		return
 	}
+
 	sendToAllGroups, err := tlgrm.NewGroupSender(
 		mustString("TELEGRAM__TOKEN"),
 		mustI64A("TELEGRAM__CHAT_IDS")...)
@@ -29,10 +32,30 @@ func main() {
 
 	g, ctx := errgroup.WithContext(context.Background())
 
+	mongoDB, err := mngo.NewMongoDatabase(
+		ctx,
+		mngo.BasicAuthCredentials{
+			Username: mustString("MONGODB_AUTH__USERNAME"),
+			Password: mustString("MONGODB_AUTH__PASSWORD"),
+		},
+		mustString("MONGODB_CONNECTION__HOST"),
+		mustString("MONGODB_CONNECTION__DATABASE"),
+	)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	messageStore, err := msg.NewMongoMessageRepository(mongoDB)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
 	for marketPlaceURL, groups := range cfg.Amazon.Markerplaces {
 		log.Printf("starting to watch %s", marketPlaceURL)
 
-		offerHandler := amzn.NewOfferHandler(sendToAllGroups)
+		offerHandler := amzn.NewOfferHandler(messageStore, sendToAllGroups)
 
 		g.Go(amzn.FetchResults(ctx, marketPlaceURL, groups, cfg.Amazon.SellerBlacklist, offerHandler))
 	}
