@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+  namespace: pricewatcher
+  labels:
+    app.kubernetes.io/name: watcher
+    app.kubernetes.io/part-of: pricewatcher
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: watcher
+      app.kubernetes.io/part-of: pricewatcher
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: watcher
+        app.kubernetes.io/part-of: pricewatcher
+    spec:
+      containers:
+      - image: yornesek/pricewatcher:latest
+        imagePullPolicy: Always
+        name: watcher
+        envFrom:
+        - secretRef:
+            name: pricewatcher
+        resources:
+          limits:
+            cpu: 150m
+            memory: 100Mi
+        args:
+        - --config-file
+        - /etc/pricewatcher/cfg.yml
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/pricewatcher
+      volumes:
+      - name: config-volume
+        configMap:
+         name: pricewatcher-config
