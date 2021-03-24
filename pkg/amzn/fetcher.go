@@ -28,7 +28,7 @@ func FetchResults(
 			case <-ctx.Done():
 				log.Printf("amzn.FetchResults contextCancelled for domain %s\n", domain)
 				return nil
-			default:
+			case <-time.After(5 * time.Minute):
 				for groupName, group := range cats {
 					for _, item := range group.Items {
 						time.Sleep(1000 * time.Millisecond)
